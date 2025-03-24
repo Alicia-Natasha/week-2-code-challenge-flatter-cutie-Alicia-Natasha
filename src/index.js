@@ -28,9 +28,9 @@ document.getElementById('character-bar').addEventListener('click', (event) => {
               fetch(`/characters/${characterId}`)
               .then(response => response.json())
               .then(character => {
-//                   const detailedInfo = document.getElementById('detailed-info');
-//     //               // Clear the previous details and display the new character's details
-//                 detailedInfo.innerHTML = `
+                  const detailedInfo = document.getElementById('detailed-info');
+                  // Clear the previous details and display the new character's details
+                detailedInfo.innerHTML = `
 //                 <h2>${character.name}</h2>
 //                <img src="${character.image}" alt="${character.name}" />
 //                  <p>Votes: <span id="votes-count">${character.votes}</span></p>
