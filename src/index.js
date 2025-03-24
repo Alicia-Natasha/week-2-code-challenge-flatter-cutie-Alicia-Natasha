@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('character-bar').addEventListener('click', (event) => {
     const clickedCharacter = event.target;
 
-    // if (clickedCharacter.tagName === 'SPAN') {
+    if (clickedCharacter.tagName === 'SPAN') {
     //     const characterId = clickedCharacter.getAttribute('data-id');
     //           // Fetch the details of the clicked character
     //           fetch(`/characters/${characterId}`)
@@ -40,7 +40,7 @@ document.getElementById('character-bar').addEventListener('click', (event) => {
     //             detailedInfo.setAttribute('data-votes', character.votes);
     //         })
     //         .catch(error => console.error('Error fetching character details:', error));
-    // }
+    }
 });
 
 // document.getElementById('votes-form').addEventListener('submit', (event) => {
