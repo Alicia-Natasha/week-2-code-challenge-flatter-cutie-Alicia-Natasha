@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // // // Step 2: Show character details when clicked
 document.getElementById('character-bar').addEventListener('click', (event) => {
-//     const clickedCharacter = event.target;
+    const clickedCharacter = event.target;
 
-//     if (clickedCharacter.tagName === 'SPAN') {
-//         const characterId = clickedCharacter.getAttribute('data-id');
+    if (clickedCharacter.tagName === 'SPAN') {
+        const characterId = clickedCharacter.getAttribute('data-id');
 //     //           // Fetch the details of the clicked character
 //               fetch(`/characters/${characterId}`)
 //               .then(response => response.json())
@@ -39,8 +39,8 @@ document.getElementById('character-bar').addEventListener('click', (event) => {
 //                 detailedInfo.setAttribute('data-character-id', character.id);
 //                 detailedInfo.setAttribute('data-votes', character.votes);
 //             })
-//             .catch(error => console.error('Error fetching character details:', error));
-//     }
+            // .catch(error => console.error('Error fetching character details:', error));
+    }
 });
 
 // document.getElementById('votes-form').addEventListener('submit', (event) => {
