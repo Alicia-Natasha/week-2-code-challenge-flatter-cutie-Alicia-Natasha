@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         characters.forEach(character => {
     //         // Create a span tag for each character and set its name
-    //         const characterSpan = document.createElement('span');
+            const characterSpan = document.createElement('span');
     //         characterSpan.textContent = character.name;
     //         characterSpan.setAttribute('data-id', character.id); // Store character id on span for later use
     //            // Append the character name span to the character bar
