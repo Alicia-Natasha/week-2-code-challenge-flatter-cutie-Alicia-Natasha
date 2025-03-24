@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // // // Step 2: Show character details when clicked
-// document.getElementById('character-bar').addEventListener('click', (event) => {
+document.getElementById('character-bar').addEventListener('click', (event) => {
 //     const clickedCharacter = event.target;
 
 //     if (clickedCharacter.tagName === 'SPAN') {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //             })
 //             .catch(error => console.error('Error fetching character details:', error));
 //     }
-// });
+});
 
 // document.getElementById('votes-form').addEventListener('submit', (event) => {
 //     event.preventDefault();
