@@ -37,7 +37,7 @@ document.getElementById('character-bar').addEventListener('click', (event) => {
              `;
     //             // Store the character in the element for later vote updates
                 detailedInfo.setAttribute('data-character-id', character.id);
-    //             detailedInfo.setAttribute('data-votes', character.votes);
+                detailedInfo.setAttribute('data-votes', character.votes);
             })
             .catch(error => console.error('Error fetching character details:', error));
     }
