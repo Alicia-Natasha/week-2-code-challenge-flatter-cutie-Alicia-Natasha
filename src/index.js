@@ -27,7 +27,7 @@ document.getElementById('character-bar').addEventListener('click', (event) => {
               // Fetch the details of the clicked character
               fetch(`/characters/${characterId}`)
               .then(response => response.json())
-//               .then(character => {
+              .then(character => {
 //                   const detailedInfo = document.getElementById('detailed-info');
 //     //               // Clear the previous details and display the new character's details
 //                 detailedInfo.innerHTML = `
@@ -38,8 +38,8 @@ document.getElementById('character-bar').addEventListener('click', (event) => {
 //     //             // Store the character in the element for later vote updates
 //                 detailedInfo.setAttribute('data-character-id', character.id);
 //                 detailedInfo.setAttribute('data-votes', character.votes);
-//             })
-            // .catch(error => console.error('Error fetching character details:', error));
+            })
+            .catch(error => console.error('Error fetching character details:', error));
     }
 });
 
