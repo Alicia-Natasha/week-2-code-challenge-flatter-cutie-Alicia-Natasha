@@ -86,4 +86,16 @@ function handleVoteSubmit(event) {
     }
   }
 
- 
+  // Handle reset votes button click
+function handleResetVotes() {
+    if (currentCharacter) {
+      currentCharacter.votes = 0;
+      updateVoteDisplay();
+    }
+  }
+
+  // Update the vote display
+function updateVoteDisplay() {
+    const voteCountEl = document.getElementById('vote-count');
+    voteCountEl.textContent = currentCharacter.votes;
+  }
