@@ -35,4 +35,26 @@ async function init() {
       console.error('Error initializing application:', error);
     }
   }
- 
+  // Fetch characters from the API
+async function fetchCharacters() {
+    const response = await fetch('http://localhost:3000/characters');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return await response.json();
+  }
+  // Display characters in the character bar
+function displayCharacters(characters) {
+    const characterBar = document.getElementById('character-bar');
+    characterBar.innerHTML = '';
+  
+    characters.forEach(character => {
+      const span = document.createElement('span');
+      span.textContent = character.name;
+      span.dataset.id = character.id;
+  
+      span.addEventListener('click', () => displayCharacterDetails(character));
+  
+      characterBar.appendChild(span);
+    });
+  }
