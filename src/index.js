@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetch('/characters') // Fetch character data from the server
     .then(response => response.json()) // Parse the response to JSON
-    // .then(characters => {
+    .then(characters => {
     //     const characterBar = document.getElementById('character-bar');
 
     //     characters.forEach(character => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //            // Append the character name span to the character bar
     //            characterBar.appendChild(characterSpan);
     //         });
-    //     })
+        })
     //     .catch(error => console.error('Error fetching characters:', error));
 });
 
