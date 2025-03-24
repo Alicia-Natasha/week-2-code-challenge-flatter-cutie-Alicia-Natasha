@@ -43,20 +43,20 @@ document.getElementById('character-bar').addEventListener('click', (event) => {
     }
 });
 
-// document.getElementById('votes-form').addEventListener('submit', (event) => {
-//     event.preventDefault();
+document.getElementById('votes-form').addEventListener('submit', (event) => {
+    event.preventDefault();
 
-//     const votesInput = document.getElementById('votes-input');
-//     const votesToAdd = parseInt(votesInput.value, 10);
+    const votesInput = document.getElementById('votes-input');
+    const votesToAdd = parseInt(votesInput.value, 10);
 
-//     if (!isNaN(votesToAdd) && votesToAdd > 0) {
-//         const detailedInfo = document.getElementById('detailed-info');
-//         const currentVotes = parseInt(detailedInfo.getAttribute('data-votes'), 10);
-//         const newVotes = currentVotes + votesToAdd;
-//           detailedInfo.setAttribute('data-votes', newVotes);
-//           document.getElementById('votes-count').textContent = newVotes;
-//         votesInput.value = '';
-//     } else {
-//         alert('Please enter a valid number of votes.');
-//     }
-// });
+    if (!isNaN(votesToAdd) && votesToAdd > 0) {
+        const detailedInfo = document.getElementById('detailed-info');
+        const currentVotes = parseInt(detailedInfo.getAttribute('data-votes'), 10);
+        const newVotes = currentVotes + votesToAdd;
+          detailedInfo.setAttribute('data-votes', newVotes);
+          document.getElementById('votes-count').textContent = newVotes;
+        votesInput.value = '';
+    } else {
+        alert('Please enter a valid number of votes.');
+    }
+});
