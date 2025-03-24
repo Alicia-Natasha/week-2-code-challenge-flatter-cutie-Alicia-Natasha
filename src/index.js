@@ -19,3 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Step 2: Show character details when clicked
+document.getElementById('character-bar').addEventListener('click', (event) => {
+    const clickedCharacter = event.target;
+
+    if (clickedCharacter.tagName === 'SPAN') {
+        const characterId = clickedCharacter.getAttribute('data-id');
+              // Fetch the details of the clicked character
+              fetch(`/characters/${characterId}`)
+              .then(response => response.json())
+              .then(character => {
+                  const detailedInfo = document.getElementById('detailed-info');
+                  // Clear the previous details and display the new character's details
+                detailedInfo.innerHTML = `
+                <h2>${character.name}</h2>
+                <img src="${character.image}" alt="${character.name}" />
+                <p>Votes: <span id="votes-count">${character.votes}</span></p>
+            `;
+                // Store the character in the element for later vote updates
+                detailedInfo.setAttribute('data-character-id', character.id);
+                detailedInfo.setAttribute('data-votes', character.votes);
+            })
+            .catch(error => console.error('Error fetching character details:', error));
+    }
+});
+
