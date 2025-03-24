@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //         // Create a span tag for each character and set its name
             const characterSpan = document.createElement('span');
             characterSpan.textContent = character.name;
-    //         characterSpan.setAttribute('data-id', character.id); // Store character id on span for later use
+            characterSpan.setAttribute('data-id', character.id); // Store character id on span for later use
     //            // Append the character name span to the character bar
     //            characterBar.appendChild(characterSpan);
             });
